@@ -1,0 +1,196 @@
+/* Global styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* Header and Footer */
+.header, .footer {
+    background: rgba(26, 26, 29, 0.9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(231, 76, 60, 0.2);
+}
+
+.header h1, .footer h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #ecf0f1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.header h1:hover, .footer h1:hover {
+    transform: scale(1.1);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Section */
+.section {
+    margin-bottom: 40px;
+    background: rgba(44, 62, 80, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    color: #ecf0f1;
+}
+
+.section:hover {
+    background: rgba(52, 73, 94, 1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color:#03a9f4 ;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.skill {
+    width: calc(33.333% - 20px);
+    text-align: center;
+    padding: 20px;
+    background:#03a9f4 (52, 73, 94, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    background: rgba(52, 73, 94, 1);
+}
+
+/* Skill Image */
+.skill img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid #e74c3c;
+    transition: transform 0.3s ease;
+}
+
+.skill img:hover {
+    transform: scale(1.1);
+}
+
+/* Skill Text */
+.skill p {
+    margin: 0;
+    font-size: 1.3em;
+    color: #ecf0f1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Proficiency Stars */
+.skill .stars {
+    margin-top: 10px;
+}
+
+.skill .stars .star {
+    color: #f1c40f;
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.skill:hover .stars .star {
+    color: #f39c12;
+}
+
+/* Navigation Link */
+.nav-link {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #e74c3c;
+    text-decoration: none;
+    border: 2px solid #e74c3c;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav-link:hover {
+    background: #03a9f4;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .skill {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .skill {
+        width: calc(100% - 20px);
+    }
+}
+
